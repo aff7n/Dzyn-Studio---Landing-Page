@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://use.fontawesome.com/74fba53227.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dzyn Studio | Welcome</title>
+    <style>
+        body{
+            background: rgba(0,0,0,0.9);
+            margin: 0em;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .showcase::after{
+            content:'' ;
+            height: 100vh;
+            width: 100%;
+            background-image: url(./img/MustangGreen1.1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            transition: all 1000ms;
+        }
+
+        .showcase:hover::after{
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+        }
+
+        .showcase:hover .content{
+            filter: blur(0px);
+            -webkit-filter: blur(0px);   
+        }
+
+        .content{
+            position: absolute;
+            z-index: 1;
+            top: 10%;
+            left: 50%;
+            margin-top: 105px;
+            margin-left: -145px;
+            width: 300px;
+            height: 350px;
+            text-align: center;
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+            transition: all 1000ms;
+        }
+
+        .content .logo{
+            height: 230px;
+            width: 160px;
+        }
+
+        .content .title{
+            font-size: 2.6em;
+            margin-top: 0.4em;
+            font-weight: 450;
+        }
+
+        .content .txt{
+            line-height: 1.7;
+            margin-top: 0.4em;
+        }
+
+        .cont{
+            max-width: 960px;
+            margin: auto;
+            overflow: hidden;
+            padding: 3em 0.5em;
+        }
+
+        .grid3{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        .grid2{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .center{
+            text-align: center;
+            margin: auto;
+        }
+
+        .bg-light{
+            background: #e6e6e6;
+            color: #333333;
+        }
+
+        bg.dark{
+            background: #333333;
+            color: #f4f4f4;
+        }
+
+        /* for small screens*/
+        @media(max-width: 560px){
+            .showcase::after{
+            height: 50vh;
+            }
+
+            .content{
+                top: 5%;
+                margin-top: 5px;
+            }
+
+            .content .logo{
+                height: 140px;
+                width: 140px;
+            }
+
+            .content .txt{
+                display: none;
+            }
+
+            .content .title{
+                font-size: 2.1em;
+            }
+
+            .grid3, .grid2{
+                grid-template-columns: 1fr;
+            }
+
+            .services div{
+                border-bottom: #333333 dashed 1px;
+                padding: 1em 0.7em;
+            }
+        }
+
+        /* landscape */
+        @media(max-height:500px){
+            .content .title, .content .txt{
+                display: none;
+            }
+            
+            .content{
+                top: 5%;
+            }
+
+            .grid3{
+                grid-template-columns: 1fr;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="showcase">
+        <div class="content">
+            <img src="./img/DZYN Studio.png" class="logo" alt="Dzyn Studio">
+            <div class="title">
+                Welcome to Dzyn Studio
+            </div>
+            <div class="txt">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, deleniti!
+            </div>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="cont grid3 center">
+            <div>
+                <i class="fa fa-youtube-play fa-2x"></i>
+                <h3>Youtube</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, ut!</p>
+            </div>
+            <div>
+                <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+                <h3>Courses</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, ut!</p>
+            </div>
+            <div>
+                <i class="fa fa-briefcase fa-2x"></i>
+                <h3>Freelance projects</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, ut!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about bg-light">
+        <div class="cont">
+            <div class="grid2">
+                <div class="center">
+                    <i class="fa fa-laptop" style="font-size: 180px;"></i>
+                </div>
+                <div class="">
+                    <h3>About us</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ullam consequatur soluta labore modi magnam, facilis nulla nesciunt sit beatae eos natus totam! Provident rem suscipit similique dignissimos totam natus ea? Asperiores, voluptatibus impedit tenetur excepturi suscipit quas rem quisquam?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="center bg-dark">
+        <p>Dzyn Studio &copy; 2020</p>
+    </footer>
+</body>
+</html>
